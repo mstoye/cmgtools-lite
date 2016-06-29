@@ -582,6 +582,16 @@ float leptonSF_ttH(int pdgid, float pt, float eta, int nlep, float var=0){
 
 }
 
+float below100(float a, float b, float c, float d){
+ 
+  if(a<0.01&&b<0.01&&c<0.01&&d<0.01) return 0;
+  return 1;
+
+}
+
+
+
+
 float triggerSF_ttH(int pdgid1, float pt1, int pdgid2, float pt2, int nlep, float var_ee=0){
   if (var_ee!=0) assert(0); // NOT IMPLEMENTED
   if (nlep>2) return 1;
